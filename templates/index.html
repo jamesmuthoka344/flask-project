@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>say hi</title>
+<link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/main.css')}}">
+</head>
+<body>
+    <form action="greet" method="post">
+	 {% for message in get_flashed_messages()%}
+	   <p> {{message}} </p>
+	 {% endfor %}
+	
+     
+      <p><input type="text" name ="nm"/></p>
+	  <br>
+      <input type ="submit" values ="submit"  id="greet"/>
+      <br>
+    </form>
+
+
+</body>
+</html>
